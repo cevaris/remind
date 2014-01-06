@@ -51,6 +51,8 @@ gem 'devise', '~> 3.2.2'
 
 gem "twitter-bootstrap-rails", '~> 2.2.8'
 
+# gem 'detect_timezone_rails'
+
 
 
 
