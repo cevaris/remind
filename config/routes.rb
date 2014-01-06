@@ -1,5 +1,6 @@
 Remind::Application.routes.draw do
 
+  get "user/show"
   devise_for :users
 
 
