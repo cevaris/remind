@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
       devise_parameter_sanitizer.for(:account_update) do |u|
         u.permit(:first_name, :last_name, :email, :password,
         # This is important for nested attributes
-        :phone_number, :skype, :timeoutablezone,
+        :phone_number, :skype, :timezone,
         :password_confirmation, :current_password)
       end
     end

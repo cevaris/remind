@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20140106051826) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "timezone"
     t.string   "phone_number"
     t.string   "skype"
   end
