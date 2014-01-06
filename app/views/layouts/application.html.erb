@@ -47,13 +47,13 @@
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="/">Remind</a>
-          <div class="container nav-collapse">
+          <div class="container nav-collapse pull-right">
             <ul class="nav">
               <li><%= link_to "Link1", "/path1"  %></li>
               <li><%= link_to "Link2", "/path2"  %></li>
               <li><%= link_to "Link3", "/path3"  %></li>
               <% if user_signed_in? %>
-                <%= link_to "#{current_user.email}", '#' %>
+                <li><%= link_to "#{current_user.email}", user_path(current_user) %></li>
                 <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
               <% else %>
                 <li><%= link_to "Sign in", new_user_session_path %></li>
