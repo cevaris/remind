@@ -5,15 +5,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  private
-  
-    def configure_permitted_parameters
-      devise_parameter_sanitizer.for(:account_update) do |u|
-        u.permit(:first_name, :last_name, :email, :password,
-        # This is important for nested attributes
-        :phone_number, :skype, :timezone,
-        :password_confirmation, :current_password)
-      end
-    end
+  validates_format_of :phone_number, with: /\d{3}-\d{3}-\d{4}/, message: "has an Invalid Format", allow_blank: true
 
 end
