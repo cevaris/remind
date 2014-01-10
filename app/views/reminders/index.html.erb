@@ -1,0 +1,35 @@
+<h1>Listing reminders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Comments</th>
+      <th>Completed</th>
+      <th>Notify datetime</th>
+      <th>Prefered contact</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reminders.each do |reminder| %>
+      <tr>
+        <td><%= reminder.name %></td>
+        <td><%= reminder.comments %></td>
+        <td><%= reminder.completed %></td>
+        <td><%= reminder.notify_datetime %></td>
+        <td><%= reminder.prefered_contact %></td>
+        <td><%= link_to 'Show', reminder %></td>
+        <td><%= link_to 'Edit', edit_reminder_path(reminder) %></td>
+        <td><%= link_to 'Destroy', reminder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reminder', new_reminder_path %>

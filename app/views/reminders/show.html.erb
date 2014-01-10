@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @reminder.name %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @reminder.comments %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @reminder.completed %>
+</p>
+
+<p>
+  <strong>Notify datetime:</strong>
+  <%= @reminder.notify_datetime %>
+</p>
+
+<p>
+  <strong>Prefered contact:</strong>
+  <%= @reminder.prefered_contact %>
+</p>
+
+<%= link_to 'Edit', edit_reminder_path(@reminder) %> |
+<%= link_to 'Back', reminders_path %>
