@@ -7,10 +7,13 @@
   </div>
 
   <div><%= f.label :email %>
-  <%= f.email_field :email, :autofocus => true %>
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% else %>
+    <span class="label label-success"><i class="icon-ok"></i> <%= t 'settings.email_confirmed' %></span>
   <% end %>
+    <br/><br/>
+    <%= f.email_field :email, :autofocus => true %>
   </div>
 
   <div><%= f.label :phone_number %> <i>(format: XXX-XXX-XXXX)</i><br />
@@ -32,7 +35,7 @@
   <%= f.password_field :current_password %></div>
 
   <div>
-    <%= link_to "Cancel", current_user, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
+    <%= link_to "Cancel", current_user, data: { confirm: "Cancel update?" }, class: 'btn btn-danger' %>
     <%= f.submit "Update", class: 'btn' %>
   </div>
 <% end %>

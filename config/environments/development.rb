@@ -28,16 +28,4 @@ Remind::Application.configure do
   config.assets.debug = true
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-
-  config.action_mailer.default_url_options = { :host => 'localhost' }  
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :address              => "smtp.gmail.com",
-    :port                 => 587,
-    :user_name            => 'remind.me.dev@gmail.com',
-    :password             => 'dev.remind.me',
-    :authentication       => 'plain',
-    :enable_starttls_auto => true  
-  }
-
 end
