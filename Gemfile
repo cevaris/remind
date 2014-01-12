@@ -63,6 +63,8 @@ gem "font-awesome-rails"
 gem 'twilio-ruby'
 
 
+ruby "2.0.0"
+
 
 
 
