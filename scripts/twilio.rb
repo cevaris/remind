@@ -32,7 +32,8 @@ def send_sms(info)
   sms = @twilio_client.account.messages.create(
     :from => twilio_phone_number,
     :to => info[:to],
-    :body => info[:message]
+    :body => info[:message],
+    :url => "http://dev-remind.herokuapp.com/sms/receive?=111"
   )
 
 end

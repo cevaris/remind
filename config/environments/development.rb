@@ -29,7 +29,6 @@ Remind::Application.configure do
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
-
   config.TWILIO = {
     sid:   'AC81c89a5e48e374426cda01507e7fea51',
     auth:  '2a25747856ce98d25cd93bc88832dcc7',

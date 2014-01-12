@@ -54,7 +54,6 @@ end
 
 
 gem 'devise', '~> 3.2.2'
-
 gem 'twitter-bootstrap-rails', '~> 2.2.8'
 gem 'jquery-ui-rails'
 gem 'jquery-timepicker-addon-rails'

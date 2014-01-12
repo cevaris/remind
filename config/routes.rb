@@ -2,13 +2,10 @@ Remind::Application.routes.draw do
 
   match '/sms/receive/' => 'mailer#sms_receive', via: [:get, :post]
 
-  
   resources :reminders
 
   devise_for :users, :controllers => { :registrations => "registrations" }
   resources :users, :only => [:show]
-  
-
 
   root :to => "home#index"
 
