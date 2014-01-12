@@ -1,1 +1,20 @@
- Parameters: {"AccountSid"=>"AC81c89a5e48e374426cda01507e7fea51", "MessageSid"=>"SMf41219888f3088d794728c33cb50985d", "Body"=>"Test5", "ToZip"=>"80203", "ToCity"=>"DENVER", "FromState"=>"CA", "ToState"=>"CO", "SmsSid"=>"SMf41219888f3088d794728c33cb50985d", "To"=>"+13039004104", "ToCountry"=>"US", "FromCountry"=>"US", "SmsMessageSid"=>"SMf41219888f3088d794728c33cb50985d", "ApiVersion"=>"2010-04-01", "FromCity"=>"FRESNO", "SmsStatus"=>"received", "NumMedia"=>"0", "From"=>"+15594516126", "FromZip"=>"93650"}
+ Parameters: {
+  "AccountSid"=>"AC81c89a5e48e374426cda01507e7fea51", 
+  "MessageSid"=>"SMf41219888f3088d794728c33cb50985d", 
+  "Body"=>"Test5", 
+  "ToZip"=>"80203", 
+  "ToCity"=>"DENVER", 
+  "FromState"=>"CA", 
+  "ToState"=>"CO", 
+  "SmsSid"=>"SMf41219888f3088d794728c33cb50985d", 
+  "To"=>"+13039004104", 
+  "ToCountry"=>"US", 
+  "FromCountry"=>"US", 
+  "SmsMessageSid"=>"SMf41219888f3088d794728c33cb50985d", 
+  "ApiVersion"=>"2010-04-01", 
+  "FromCity"=>"FRESNO", 
+  "SmsStatus"=>"received", 
+  "NumMedia"=>"0", 
+  "From"=>"+15594516126", 
+  "FromZip"=>"93650"
+}

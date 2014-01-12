@@ -1,5 +1,7 @@
 Remind::Application.routes.draw do
 
+  match '/sms/receive/' => 'mailer#sms_receive', via: [:get, :post]
+
   
   resources :reminders
 
@@ -11,7 +13,7 @@ Remind::Application.routes.draw do
   root :to => "home#index"
 
 
-  match '/sms/receive/' => 'mailer#sms_receive', via: [:get, :post]
+
 
   
   # The priority is based upon order of creation: first created -> highest priority.
