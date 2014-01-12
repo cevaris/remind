@@ -20,19 +20,13 @@
     <%= f.text_area :comments %>
   </div>
   <div class="field">
-    <%= f.label :completed %><br>
+    <%= f.label :completed %>
     <%= f.check_box :completed %>
   </div>
   <div class="field">
     <%= f.label :notify_datetime %><br>
     <%= f.text_field :notify_datetime, class: 'picker' %>
   </div>
-
-  <div class="field">
-    <%= f.label :prefered_contact %><br>
-    <%= f.text_field :prefered_contact %>
-  </div>
-
   <div class="actions">
     <%= f.submit %>
   </div>
@@ -40,12 +34,15 @@
 
 <script type="text/javascript">
 
-    var now = new Date();
-    $('.picker').datetimepicker({
-      hour: now.getHours(),
-      minute: now.getMinutes(),
-      minDate: now
-    });
+$(document).ready(function() {
+  var now = new Date();
+  $('.picker').datetimepicker({
+    hour: now.getHours(),
+    minute: now.getMinutes(),
+    minDate: now,
+    timeFormat: 'hh:mm TT'
+  });
+
+});
     
 </script>
-

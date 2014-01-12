@@ -6,7 +6,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   has_many :reminders
-  
+
   validates_format_of :phone_number, with: /\d{3}-\d{3}-\d{4}/, message: "has an Invalid Format", allow_blank: true
+
+  
 
 end

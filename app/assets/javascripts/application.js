@@ -17,3 +17,4 @@
 //= require_tree .
 //= require jquery.ui.all
 //= require jquery-ui-timepicker-addon
+//= require select2

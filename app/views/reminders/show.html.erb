@@ -7,22 +7,25 @@
 
 <p>
   <strong>Comments:</strong>
-  <%= @reminder.comments %>
+  <% if @reminder.comments.empty? %>
+    No Comments
+  <% else %>
+    <%= @reminder.comments %>
+  <% end %>
 </p>
 
 <p>
   <strong>Completed:</strong>
-  <%= @reminder.completed %>
+  <% if @reminder.completed %>
+    <i class="fa fa-thumb-up"></i>
+  <% else %>
+    <i class="fa fa-thumbs-down"></i>  
+  <% end %>
 </p>
 
 <p>
   <strong>Notify datetime:</strong>
   <%= @reminder.notify_datetime %>
-</p>
-
-<p>
-  <strong>Prefered contact:</strong>
-  <%= @reminder.prefered_contact %>
 </p>
 
 <%= link_to 'Edit', edit_reminder_path(@reminder) %> |

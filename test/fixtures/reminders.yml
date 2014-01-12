@@ -4,12 +4,10 @@ one:
   name: MyString
   comments: MyText
   completed: false
-  notify_datetime: 2014-01-10 13:30:07
-  prefered_contact: MyString
+  notify_datetime: 2014-01-10 14:56:23
 
 two:
   name: MyString
   comments: MyText
   completed: false
-  notify_datetime: 2014-01-10 13:30:07
-  prefered_contact: MyString
+  notify_datetime: 2014-01-10 14:56:23

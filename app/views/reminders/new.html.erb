@@ -1,5 +1,54 @@
-<h1>New reminder</h1>
+<h1>New Reminder</h1>
 
-<%= render 'form' %>
+<%= form_for(@reminder) do |f| %>
+  <% if @reminder.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reminder.errors.count, "error") %> prohibited this reminder from being saved:</h2>
+
+      <ul>
+      <% @reminder.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :notify_datetime %><br>
+    <%= f.text_field :notify_datetime, class: 'picker' %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :comments %><br>
+    <%= f.text_area :comments, class: 'span5' %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+  var now = new Date();
+  $('.picker').datetimepicker({
+    hour: now.getHours(),
+    minute: now.getMinutes(),
+    minDate: now,
+    timeFormat: 'hh:mm TT'
+  });
+
+  $('textarea').autosize();
+
+});
+    
+</script>
+
 
 <%= link_to 'Back', reminders_path %>

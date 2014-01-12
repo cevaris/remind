@@ -7,7 +7,6 @@
       <th>Comments</th>
       <th>Completed</th>
       <th>Notify datetime</th>
-      <th>Prefered contact</th>
       <th></th>
       <th></th>
       <th></th>
@@ -20,8 +19,7 @@
         <td><%= reminder.name %></td>
         <td><%= reminder.comments %></td>
         <td><%= reminder.completed %></td>
-        <td><%= reminder.notify_datetime %></td>
-        <td><%= reminder.prefered_contact %></td>
+        <td><%= l(reminder.notify_datetime, format: :reminder) %></td>
         <td><%= link_to 'Show', reminder %></td>
         <td><%= link_to 'Edit', edit_reminder_path(reminder) %></td>
         <td><%= link_to 'Destroy', reminder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
