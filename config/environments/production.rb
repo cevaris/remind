@@ -78,4 +78,10 @@ Remind::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
+  config.TWILIO = {
+    sid:   'AC81c89a5e48e374426cda01507e7fea51',
+    auth:  '2a25747856ce98d25cd93bc88832dcc7',
+    phone: '+13039004104'
+  }
+
 end
