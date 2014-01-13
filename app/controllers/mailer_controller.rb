@@ -1,15 +1,15 @@
 class MailerController < ApplicationController
 
-  protect_from_forgery :except => ["sms_receive"]
+  protect_from_forgery except: [:sms_receive]
 
   def sms_receive 
     Rails.logger.info params
+    Rails.logger.info request.fullpath
 
     if params.has_key?('From') and params.has_key?('Body')
-      from_phone_number = params['From'].tr('+1','')
+      from_phone_number = params['From'].gsub('+1','')
       message = params['Body']
-
-      user = User.where( phone_number: from_phone_number )
+      user = User.find_by_phone_number from_phone_number
       Rails.logger.info "User #{user.email} said #{message}"
     end
 

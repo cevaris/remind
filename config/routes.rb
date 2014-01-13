@@ -1,6 +1,7 @@
 Remind::Application.routes.draw do
 
-  match '/sms/receive/' => 'mailer#sms_receive', via: [:get, :post]
+  match '/sms/receive/deny' => 'mailer#sms_receive', via: [:get, :post]
+  match '/sms/receive/confirm' => 'mailer#sms_receive_confirm', via: [:get, :post]
 
   resources :reminders
 
