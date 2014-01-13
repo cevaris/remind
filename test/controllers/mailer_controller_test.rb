@@ -6,5 +6,5 @@ class MailerControllerTest < ActionController::TestCase
     post :sms_receive, {"From" => "+15594516126", "Body" => 'This is test body'}
   end
   # 
-  # http://dev-remind.herokuapp.com/sms/receive?=111
+  # http://dev-remind.herokuapp.com/sms/receive
 end

@@ -51,8 +51,6 @@ end
 # gem 'debugger', group: [:development, :test]
 
 
-
-
 gem 'devise', '~> 3.2.2'
 gem 'twitter-bootstrap-rails', '~> 2.2.8'
 gem 'jquery-ui-rails'
@@ -62,9 +60,12 @@ gem "font-awesome-rails"
 gem 'twilio-ruby'
 gem 'activerecord-session_store'
 
+
+
+
+
+
+
 ruby "2.0.0"
-
-
-
 
 
