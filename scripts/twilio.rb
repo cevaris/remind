@@ -33,7 +33,7 @@ def send_sms(info)
     :from => twilio_phone_number,
     :to => info[:to],
     :body => info[:message],
-    :url => "http://dev-remind.herokuapp.com/sms/receive?=111"
+    :url => "http://dev-remind.herokuapp.com/sms/receive?=confirm"
   )
 
 end

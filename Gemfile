@@ -60,7 +60,7 @@ gem 'jquery-timepicker-addon-rails'
 gem "select2-rails"
 gem "font-awesome-rails"
 gem 'twilio-ruby'
-
+gem 'activerecord-session_store'
 
 ruby "2.0.0"
 
